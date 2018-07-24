@@ -1,0 +1,119 @@
+<!-- <div class="medium-list">
+    <div class="list-view">
+      <div class="list-header">Login</div>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginsubmit()" novalidate>
+      <div class="form-container">
+        <mat-form-field>
+            <input id="email" matInput formControlName="email" [(ngModel)]="user.email" placeholder="Enter your email">  
+         </mat-form-field>
+  
+         <mat-form-field>
+            <input id="password" matInput formControlName="password" [(ngModel)]="user.password" placeholder="enter your password"
+            [type]="hide ? 'password':'text'">
+              <mat-icon matSuffix (click)="hide=!hide">
+              {{hide ? 'visibility':'visibility_off'}}
+              </mat-icon >
+         </mat-form-field>
+  
+  
+        <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!loginForm.valid">Login</button>
+        
+        <button mat-button routerLink="/register" class="devider">Register</button>
+      </div>
+  
+  
+  
+      </form>
+    </div>
+  </div> -->
+
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+        <div class="card" style="width: 35rem;">
+    <div class="col-md-12">
+      <h2>Basic Information</h2>
+      <form (ngSubmit)="login()" [formGroup]="myForm" name="form" (ngSubmit)="f.form.valid && profile()" #f="ngForm" novalidate>
+          <div class="form-group">
+              <label>First Name<span class="text-danger">*</span></label>
+              <input type="text" placeholder="First name" class="form-control" formControlName="firstname" [ngClass]="{'is-invalid': firstname.errors && (firstname.touched || firstname.dirty), 'is-valid':firstname.valid}"   >
+              <div class="invalid-feedback" >
+              <strong *ngIf="firstname.errors?.required">User name is required</strong>
+              <!-- <strong *ngIf="user_name.errors?.minlength">User Name  length must be greated than 10 character. </strong> -->
+              </div>
+              </div> 
+
+              <div class="form-group">
+                <label>Last Name<span class="text-danger">*</span></label>
+                <input type="text" placeholder="Last name" class="form-control" formControlName="lastname" [ngClass]="{'is-invalid': lastname.errors && (lastname.touched || lastname.dirty), 'is-valid':lastname.valid}"   >
+                <div class="invalid-feedback" >
+                <strong *ngIf="lastname.errors?.required">User name is required</strong>
+                <!-- <strong *ngIf="user_name.errors?.minlength">User Name  length must be greated than 10 character. </strong> -->
+                </div>
+                </div> 
+              
+              <div class="form-group">
+                <label>Email<span class="text-danger">*</span></label>
+                <input  type="text"  class="form-control"placeholder="Email" formControlName="email" [ngClass]="{'is-invalid': email.errors && (email.touched || email.dirty), 'is-valid':email.valid}"   >
+                <div class="invalid-feedback" >
+                <strong *ngIf="email.errors?.required">Email is required</strong>
+                <!-- <strong *ngIf="user_name.errors?.minlength">User Name  length must be greated than 10 character. </strong> -->
+                </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Phone number</label>
+                  <input  type="text"  class="form-control"placeholder="Phone number" formControlName="phone"  >
+                  </div>
+                  
+              <h2>Mailing Address</h2>
+
+              <div class="form-group">
+                <label>Address 1</label>
+                <input  type="text"  class="form-control"placeholder="Address 1" formControlName="address"  >
+                </div>
+
+                <div class="form-group">
+                  <label>Address 2</label>
+                  <input  type="text"  class="form-control"placeholder="Address 2" formControlName="address"  >
+                  </div>
+
+                  <div class="form-group">
+                    <label>City</label>
+                    <input  type="text"  class="form-control"placeholder="City" formControlName="city"  >
+                    </div>
+
+                    <div class="form-group">
+                      <label>Postal Code</label>
+                      <input  type="text"  class="form-control"placeholder="Postal code" formControlName="postal"  >
+                      </div>
+
+                      <h2>Profile information</h2>
+
+                      <div class="form-group">
+                        <label>facebook</label>
+                        <input  type="text"  class="form-control"placeholder="facebook" formControlName="facebook"  >
+                        </div>
+
+                        <div class="form-group">
+                          <label>Twitter</label>
+                          <input  type="text"  class="form-control"placeholder="Twitter" formControlName="twitter"  >
+                          </div>
+
+                          <div class="form-group">
+                            <label>Linkedin</label>
+                            <input  type="text"  class="form-control"placeholder="Linkedin" formControlName="linkedin"  >
+                            </div>
+
+
+
+                  
+          <div class="form-group space">
+              <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Save</button>
+          </div>
+      </form>
+  </div>
+  </div>
+  </div>
+  </div>

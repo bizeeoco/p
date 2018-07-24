@@ -1,0 +1,12 @@
+@mixin rkui-theme-color() {
+  @each $name, $color in $rkui-theme-colors {
+
+    .rkui-background-#{$name} {
+      color: mat-color($color, default-contrast) !important;
+      background-color: mat-color($color, default) !important;
+    }
+    .rkui-#{$name} {
+      background-color: mat-color($color, default) !important;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* footer */
+footer {background-image: url('../../../assets/img/footerdog.png');background-size: cover;background-position: center center;}
+#FootNav{font-family: 'Fira Sans', sans-serif;width: 100%;background: transparent !important;padding-top: 117px;}
+#FootNav.navbar-dark .navbar-nav .nav-link{font-size: 22px;}
+#FootNav.navbar-dark .navbar-nav .active>.nav-link{color: #ffeb5b;}
+#FootNav.navbar-expand-md .navbar-nav .nav-link {padding-right: 1rem;padding-left: 1rem;}
+#FootNav ul li.dropdown:hover div.dropdown-menu{ display: block; }
+#FootNav .dropdown-item:focus, .dropdown-item:hover {color: #fff;background: #1b09eb;}
+#FootNav .dropdown-item {padding: .001rem 1.5rem;}
+#FootNav .navbar-noncollapse {display: -ms-flexbox!important;display: flex!important;-ms-flex-preferred-size: auto;flex-basis: auto;}
+#FootNav ul li.dropdown div.dropdown-menu {position: absolute;margin-left: 16px;margin-top: -5px;}
+.footer-social{width: 100%;text-align: center;padding: 0;margin: 35px 0 0 0;}
+.footer-social li{width: 41px;height: 41px;border-radius: 50%;display: inline-block;list-style-type: none;overflow: hidden;margin-right: 5px;}
+.footer-social li a{display: block; width: 100%;height: 100%;text-align: center;color: #fff;}
+.footer-social li a:hover{text-decoration: none;}
+.footer-social li a i{display: block; width: 100%;height: 100%;font-size: 18px;padding-top: 10px;color:#fff;}
+.footer-social li a .fa-linkedin-in{background: #004090;}
+.footer-social li a .fa-google-plus-g{background: #ee1f3e;}
+.footer-social li a .fa-facebook-f{background: #2a83f0;}
+.footer-social li a:hover .fa-linkedin-in{color: #004090;background: #fff;}
+.footer-social li a:hover .fa-google-plus-g{color: #ee1f3e;background: #fff;}
+.footer-social li a:hover .fa-facebook-f{color: #2a83f0;background: #fff;}
+.footer-p{color: #fff;font-weight: 500;text-align: center;width: 100%;margin-top: 22px;margin-bottom: 52px;}
+@media only screen and (max-width: 991px){
+	#FootNav {padding-top: 30px;}
+	#FootNav.navbar-dark .navbar-nav .nav-link {font-size: 16px;}
+}
+@media only screen and (max-width: 767px){
+	#FootNav .navbar-nav{text-align: center;}
+	#FootNav ul li.dropdown div.dropdown-menu {margin-left: 0;}
+}
+/* Footer */

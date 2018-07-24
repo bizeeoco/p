@@ -1,0 +1,22 @@
+/* Header */
+* ,h1,h2,h3,h4,h5,h6,p{font-family: 'Fira Sans', sans-serif;}
+#MainNav{font-family: 'Fira Sans', sans-serif;position: fixed;width: 100%;z-index: 1;background: #00000099 !important;}
+#MainNav .navbar-brand img {width: 235px;}
+#MainNav.navbar-dark .navbar-nav .nav-link{font-size: 18px;}
+#MainNav.navbar-dark .navbar-nav .active>.nav-link{color: #ffeb5b;}
+#MainNav.navbar-expand-md .navbar-nav .nav-link {padding-right: 1.5rem;padding-left: 1.5rem;}
+#MainNav ul li.dropdown:hover div.dropdown-menu{ display: block; }
+#MainNav .dropdown-item:focus, .dropdown-item:hover {color: #fff;background: #1b09eb;}
+#MainNav ul li.dropdown div.dropdown-menu {position: absolute;margin-left: 16px;margin-top: -5px;}
+@media only screen and (max-width: 1199px){
+	#MainNav .navbar-brand img {width: 155px;}
+	#MainNav .container {padding: 0;}
+}
+@media only screen and (max-width: 991px){
+	#MainNav .navbar-brand img {width: 120px;}
+	#MainNav.navbar-expand-md .navbar-nav .nav-link {padding-right: 0.4rem;padding-left: 0.4rem;}
+}
+@media only screen and (max-width: 767px){
+	#MainNav{background: #000000 !important;}
+}
+/* Header Over */

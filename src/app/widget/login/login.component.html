@@ -1,0 +1,67 @@
+<!-- <div class="medium-list">
+    <div class="list-view">
+      <div class="list-header">Login</div>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginsubmit()" novalidate>
+      <div class="form-container">
+        <mat-form-field>
+            <input id="email" matInput formControlName="email" [(ngModel)]="user.email" placeholder="Enter your email">  
+         </mat-form-field>
+  
+         <mat-form-field>
+            <input id="password" matInput formControlName="password" [(ngModel)]="user.password" placeholder="enter your password"
+            [type]="hide ? 'password':'text'">
+              <mat-icon matSuffix (click)="hide=!hide">
+              {{hide ? 'visibility':'visibility_off'}}
+              </mat-icon >
+         </mat-form-field>
+  
+  
+        <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!loginForm.valid">Login</button>
+        
+        <button mat-button routerLink="/register" class="devider">Register</button>
+      </div>
+  
+  
+  
+      </form>
+    </div>
+  </div> -->
+
+
+<div class="container">
+  <div class="row justify-content-md-center">
+      <div class="card" style="width: 18rem;">
+  <div class="col-md-12">
+    <h2>Login</h2>
+    <form [formGroup]="myForm" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        
+        <div class="form-group">
+            <label>User Name<span class="text-danger">*</span></label>
+            <input type="text" placeholder="User name" [(ngModel)]="userLogin.name" class="form-control" formControlName="user_name" [ngClass]="{'is-invalid': user_name.errors && (user_name.touched || user_name.dirty), 'is-valid':user_name.valid}"   >
+            <div class="invalid-feedback" >
+            <strong *ngIf="user_name.errors?.required">User name is required</strong>
+            <!-- <strong *ngIf="user_name.errors?.minlength">User Name  length must be greated than 10 character. </strong> -->
+            </div>
+            </div>  
+
+            <div class="form-group">
+                <label>Password<span class="text-danger">*</span></label>
+                <input type="text" placeholder="Password" [(ngModel)]="userLogin.password" class="form-control" formControlName="pass_word" [ngClass]="{'is-invalid': pass_word.errors && (pass_word.touched || pass_word.dirty), 'is-valid':pass_word.valid}"   >
+                <div class="invalid-feedback" >
+                <strong *ngIf="pass_word.errors?.required">password is required</strong>
+                <!-- <strong *ngIf="pass_word.errors?.minlength">User Name  length must be greated than 10 character. </strong> -->
+                </div>
+                </div>  
+                
+        <div class="form-group space">
+            <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Login</button>
+            <button [routerLink]="['/register']" class="btn btn-primary">Register</button>
+            <button [routerLink]="['/home']" class="btn btn-primary">Cancel</button>
+        </div>
+        <a  [routerLink]="['/forgotpassword']">Forgot password?</a>
+    </form>
+</div>
+</div>
+</div>
+</div>
